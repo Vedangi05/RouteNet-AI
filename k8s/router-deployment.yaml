@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: router
+  labels:
+    app: router
+spec:
+  replicas: 1  # Single router instance
+  selector:
+    matchLabels:
+      app: router
+  template:
+    metadata:
+      labels:
+        app: router
+    spec:
+      containers:
+      - name: router
+        image: routenet/router:latest
+        imagePullPolicy: Never  # Use local image from Kind
+        ports:
+        - containerPort: 8080
+        env:
+        - name: INFERENCE_SERVICE_URL
+          value: "http://inference-service:8000"
+        - name: ROUTING_MODE
+          value: "ai-driven"  # Phase 1: AI routing enabled
+        - name: ATEN_CPU_CAPABILITY
+          value: "default"    # Fix for ARM64 PyTorch crash
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 5

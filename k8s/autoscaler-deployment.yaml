@@ -1,0 +1,72 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: autoscaler-sa
+  namespace: default
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: autoscaler-role
+  namespace: default
+rules:
+- apiGroups: ["apps"]
+  resources: ["deployments/scale"]
+  verbs: ["get", "update", "patch"]
+- apiGroups: ["apps"]
+  resources: ["deployments"]
+  verbs: ["get"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: autoscaler-rolebinding
+  namespace: default
+subjects:
+- kind: ServiceAccount
+  name: autoscaler-sa
+  namespace: default
+roleRef:
+  kind: Role
+  name: autoscaler-role
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: autoscaler
+  labels:
+    app: autoscaler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: autoscaler
+  template:
+    metadata:
+      labels:
+        app: autoscaler
+    spec:
+      serviceAccountName: autoscaler-sa
+      containers:
+      - name: autoscaler
+        image: routenet/autoscaler:latest
+        imagePullPolicy: Never
+        env:
+        - name: ROUTER_URL
+          value: "http://router-service:30080"  # Or cluster DNS: http://router-service:8080. Using Service DNS.
+        - name: DEPLOYMENT_NAME
+          value: "inference-worker"
+        - name: NAMESPACE
+          value: "default"
+        - name: POLL_INTERVAL
+          value: "5"
+        - name: WINDOW_SIZE
+          value: "5"
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "200m"
+            memory: "256Mi"

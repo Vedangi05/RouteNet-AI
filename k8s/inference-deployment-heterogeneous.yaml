@@ -1,0 +1,155 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inference-worker-fast
+  labels:
+    app: inference-worker
+    performance: fast
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inference-worker
+      performance: fast
+  template:
+    metadata:
+      labels:
+        app: inference-worker
+        performance: fast
+    spec:
+      containers:
+      - name: inference-worker
+        image: routenet/inference-worker:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: ARTIFICIAL_DELAY
+          value: "0.02"  # 20ms delay - fast pod
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inference-worker-medium
+  labels:
+    app: inference-worker
+    performance: medium
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inference-worker
+      performance: medium
+  template:
+    metadata:
+      labels:
+        app: inference-worker
+        performance: medium
+    spec:
+      containers:
+      - name: inference-worker
+        image: routenet/inference-worker:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: ARTIFICIAL_DELAY
+          value: "0.10"  # 100ms delay - medium pod
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inference-worker-slow
+  labels:
+    app: inference-worker
+    performance: slow
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inference-worker
+      performance: slow
+  template:
+    metadata:
+      labels:
+        app: inference-worker
+        performance: slow
+    spec:
+      containers:
+      - name: inference-worker
+        image: routenet/inference-worker:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: ARTIFICIAL_DELAY
+          value: "0.25"  # 250ms delay - slow pod
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5

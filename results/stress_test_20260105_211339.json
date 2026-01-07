@@ -1,0 +1,656 @@
+{
+  "config": {
+    "burst_size": 30,
+    "num_bursts": 3,
+    "burst_interval": 5.0
+  },
+  "stats": {
+    "total_requests": 90,
+    "successful": 90,
+    "failed": 0,
+    "success_rate": 100.0,
+    "duration_seconds": 23.095301866531372,
+    "latency": {
+      "min": 1046.2892055511475,
+      "max": 5065.851211547852,
+      "mean": 2308.8340865241157,
+      "median": 2005.124568939209,
+      "p50": 2026.7090797424316,
+      "p95": 4216.845273971558,
+      "p99": 5065.851211547852,
+      "stdev": 871.1808998924356
+    }
+  },
+  "requests": [
+    {
+      "success": true,
+      "request_id": 23,
+      "latency_ms": 1046.2892055511475,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:16.979483"
+    },
+    {
+      "success": true,
+      "request_id": 26,
+      "latency_ms": 1148.1292247772217,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:17.081307"
+    },
+    {
+      "success": true,
+      "request_id": 22,
+      "latency_ms": 1659.5478057861328,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:17.592296"
+    },
+    {
+      "success": true,
+      "request_id": 27,
+      "latency_ms": 1659.3520641326904,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:17.592614"
+    },
+    {
+      "success": true,
+      "request_id": 8,
+      "latency_ms": 1751.7318725585938,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:17.682196"
+    },
+    {
+      "success": true,
+      "request_id": 12,
+      "latency_ms": 1751.0340213775635,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:17.682530"
+    },
+    {
+      "success": true,
+      "request_id": 20,
+      "latency_ms": 1750.2169609069824,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:17.682780"
+    },
+    {
+      "success": true,
+      "request_id": 25,
+      "latency_ms": 1845.139980316162,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:17.778230"
+    },
+    {
+      "success": true,
+      "request_id": 3,
+      "latency_ms": 1853.49702835083,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:17.783763"
+    },
+    {
+      "success": true,
+      "request_id": 17,
+      "latency_ms": 1855.3111553192139,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:17.787602"
+    },
+    {
+      "success": true,
+      "request_id": 15,
+      "latency_ms": 1920.8860397338867,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:17.852969"
+    },
+    {
+      "success": true,
+      "request_id": 24,
+      "latency_ms": 1960.5419635772705,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:17.893537"
+    },
+    {
+      "success": true,
+      "request_id": 16,
+      "latency_ms": 1965.2149677276611,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:17.897394"
+    },
+    {
+      "success": true,
+      "request_id": 21,
+      "latency_ms": 2026.7090797424316,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:17.959391"
+    },
+    {
+      "success": true,
+      "request_id": 4,
+      "latency_ms": 2090.5706882476807,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:18.020895"
+    },
+    {
+      "success": true,
+      "request_id": 18,
+      "latency_ms": 2107.9649925231934,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:18.040362"
+    },
+    {
+      "success": true,
+      "request_id": 29,
+      "latency_ms": 2121.9241619110107,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:18.055397"
+    },
+    {
+      "success": true,
+      "request_id": 14,
+      "latency_ms": 2134.9868774414062,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:18.066946"
+    },
+    {
+      "success": true,
+      "request_id": 2,
+      "latency_ms": 2187.401056289673,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:18.117575"
+    },
+    {
+      "success": true,
+      "request_id": 0,
+      "latency_ms": 2234.224796295166,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:18.164182"
+    },
+    {
+      "success": true,
+      "request_id": 7,
+      "latency_ms": 2414.212942123413,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:18.344653"
+    },
+    {
+      "success": true,
+      "request_id": 19,
+      "latency_ms": 2705.400228500366,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:18.637909"
+    },
+    {
+      "success": true,
+      "request_id": 9,
+      "latency_ms": 3003.883123397827,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:18.934408"
+    },
+    {
+      "success": true,
+      "request_id": 11,
+      "latency_ms": 3298.1503009796143,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:19.228820"
+    },
+    {
+      "success": true,
+      "request_id": 1,
+      "latency_ms": 3598.1531143188477,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:19.528252"
+    },
+    {
+      "success": true,
+      "request_id": 28,
+      "latency_ms": 3902.6386737823486,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:19.836044"
+    },
+    {
+      "success": true,
+      "request_id": 6,
+      "latency_ms": 4212.213039398193,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:20.142641"
+    },
+    {
+      "success": true,
+      "request_id": 5,
+      "latency_ms": 4472.553014755249,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:20.402973"
+    },
+    {
+      "success": true,
+      "request_id": 10,
+      "latency_ms": 4785.303115844727,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:20.715875"
+    },
+    {
+      "success": true,
+      "request_id": 13,
+      "latency_ms": 5065.851211547852,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:20.997735"
+    },
+    {
+      "success": true,
+      "request_id": 34,
+      "latency_ms": 1585.9520435333252,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:27.588971"
+    },
+    {
+      "success": true,
+      "request_id": 32,
+      "latency_ms": 1682.3680400848389,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:27.683585"
+    },
+    {
+      "success": true,
+      "request_id": 35,
+      "latency_ms": 1680.440902709961,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:27.683949"
+    },
+    {
+      "success": true,
+      "request_id": 46,
+      "latency_ms": 1668.1699752807617,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:27.684195"
+    },
+    {
+      "success": true,
+      "request_id": 36,
+      "latency_ms": 1679.9468994140625,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:27.684460"
+    },
+    {
+      "success": true,
+      "request_id": 39,
+      "latency_ms": 1677.2708892822266,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:27.684635"
+    },
+    {
+      "success": true,
+      "request_id": 30,
+      "latency_ms": 1684.3090057373047,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:27.684959"
+    },
+    {
+      "success": true,
+      "request_id": 33,
+      "latency_ms": 1682.765007019043,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:27.685243"
+    },
+    {
+      "success": true,
+      "request_id": 42,
+      "latency_ms": 1674.140214920044,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:27.685467"
+    },
+    {
+      "success": true,
+      "request_id": 51,
+      "latency_ms": 1735.9559535980225,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:27.755220"
+    },
+    {
+      "success": true,
+      "request_id": 43,
+      "latency_ms": 1781.3260555267334,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:27.794317"
+    },
+    {
+      "success": true,
+      "request_id": 45,
+      "latency_ms": 1831.6049575805664,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:27.846730"
+    },
+    {
+      "success": true,
+      "request_id": 49,
+      "latency_ms": 1831.7902088165283,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:27.849999"
+    },
+    {
+      "success": true,
+      "request_id": 41,
+      "latency_ms": 1843.0399894714355,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:27.852203"
+    },
+    {
+      "success": true,
+      "request_id": 48,
+      "latency_ms": 1901.0639190673828,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:27.918634"
+    },
+    {
+      "success": true,
+      "request_id": 52,
+      "latency_ms": 1980.7219505310059,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:28.000484"
+    },
+    {
+      "success": true,
+      "request_id": 54,
+      "latency_ms": 1983.5400581359863,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:28.005464"
+    },
+    {
+      "success": true,
+      "request_id": 47,
+      "latency_ms": 2049.0288734436035,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:28.065445"
+    },
+    {
+      "success": true,
+      "request_id": 57,
+      "latency_ms": 2086.4651203155518,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:28.109974"
+    },
+    {
+      "success": true,
+      "request_id": 31,
+      "latency_ms": 2137.8302574157715,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:28.138840"
+    },
+    {
+      "success": true,
+      "request_id": 58,
+      "latency_ms": 2228.4300327301025,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:28.252751"
+    },
+    {
+      "success": true,
+      "request_id": 50,
+      "latency_ms": 2384.11283493042,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:28.402863"
+    },
+    {
+      "success": true,
+      "request_id": 40,
+      "latency_ms": 2437.7219676971436,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:28.445972"
+    },
+    {
+      "success": true,
+      "request_id": 44,
+      "latency_ms": 2709.392786026001,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:28.722965"
+    },
+    {
+      "success": true,
+      "request_id": 37,
+      "latency_ms": 3006.456136703491,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:29.012359"
+    },
+    {
+      "success": true,
+      "request_id": 38,
+      "latency_ms": 3309.8809719085693,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:29.316881"
+    },
+    {
+      "success": true,
+      "request_id": 55,
+      "latency_ms": 3600.893974304199,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:29.623276"
+    },
+    {
+      "success": true,
+      "request_id": 53,
+      "latency_ms": 3915.755033493042,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:29.937031"
+    },
+    {
+      "success": true,
+      "request_id": 56,
+      "latency_ms": 4216.845273971558,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:30.239882"
+    },
+    {
+      "success": true,
+      "request_id": 59,
+      "latency_ms": 4519.369840621948,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:30.544235"
+    },
+    {
+      "success": true,
+      "request_id": 62,
+      "latency_ms": 1342.292070388794,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:36.890283"
+    },
+    {
+      "success": true,
+      "request_id": 64,
+      "latency_ms": 1343.6639308929443,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:36.892804"
+    },
+    {
+      "success": true,
+      "request_id": 65,
+      "latency_ms": 1428.8389682769775,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:36.978795"
+    },
+    {
+      "success": true,
+      "request_id": 61,
+      "latency_ms": 1431.5438270568848,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:36.979238"
+    },
+    {
+      "success": true,
+      "request_id": 67,
+      "latency_ms": 1436.6731643676758,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:36.987565"
+    },
+    {
+      "success": true,
+      "request_id": 70,
+      "latency_ms": 1457.8039646148682,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:37.014409"
+    },
+    {
+      "success": true,
+      "request_id": 84,
+      "latency_ms": 1495.9790706634521,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:37.068945"
+    },
+    {
+      "success": true,
+      "request_id": 75,
+      "latency_ms": 1549.757957458496,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:37.115944"
+    },
+    {
+      "success": true,
+      "request_id": 69,
+      "latency_ms": 1599.0970134735107,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:37.153486"
+    },
+    {
+      "success": true,
+      "request_id": 88,
+      "latency_ms": 1595.594882965088,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:37.170819"
+    },
+    {
+      "success": true,
+      "request_id": 87,
+      "latency_ms": 1655.6732654571533,
+      "routed_to_pod": "inference-worker-fast-57964b7b8c-96nv4",
+      "timestamp": "2026-01-06T02:13:37.229951"
+    },
+    {
+      "success": true,
+      "request_id": 63,
+      "latency_ms": 1705.2490711212158,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:37.253896"
+    },
+    {
+      "success": true,
+      "request_id": 60,
+      "latency_ms": 1838.8142585754395,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:37.386109"
+    },
+    {
+      "success": true,
+      "request_id": 68,
+      "latency_ms": 1870.7962036132812,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:37.423065"
+    },
+    {
+      "success": true,
+      "request_id": 73,
+      "latency_ms": 1963.4289741516113,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:37.525334"
+    },
+    {
+      "success": true,
+      "request_id": 66,
+      "latency_ms": 2132.896900177002,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:37.683336"
+    },
+    {
+      "success": true,
+      "request_id": 71,
+      "latency_ms": 2128.906011581421,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:37.686709"
+    },
+    {
+      "success": true,
+      "request_id": 82,
+      "latency_ms": 2258.3580017089844,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:37.828678"
+    },
+    {
+      "success": true,
+      "request_id": 74,
+      "latency_ms": 2404.35791015625,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:37.968579"
+    },
+    {
+      "success": true,
+      "request_id": 83,
+      "latency_ms": 2418.6511039733887,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:37.990116"
+    },
+    {
+      "success": true,
+      "request_id": 72,
+      "latency_ms": 2551.5246391296387,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:38.110697"
+    },
+    {
+      "success": true,
+      "request_id": 79,
+      "latency_ms": 2661.9319915771484,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:38.229887"
+    },
+    {
+      "success": true,
+      "request_id": 81,
+      "latency_ms": 2727.544069290161,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:38.296927"
+    },
+    {
+      "success": true,
+      "request_id": 85,
+      "latency_ms": 2799.433946609497,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:38.372725"
+    },
+    {
+      "success": true,
+      "request_id": 76,
+      "latency_ms": 2920.335054397583,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:38.486890"
+    },
+    {
+      "success": true,
+      "request_id": 86,
+      "latency_ms": 3008.091926574707,
+      "routed_to_pod": "inference-worker-slow-899b98c95-9q2wz",
+      "timestamp": "2026-01-06T02:13:38.581863"
+    },
+    {
+      "success": true,
+      "request_id": 89,
+      "latency_ms": 3021.0318565368652,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:38.596815"
+    },
+    {
+      "success": true,
+      "request_id": 78,
+      "latency_ms": 3211.9967937469482,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:38.779660"
+    },
+    {
+      "success": true,
+      "request_id": 80,
+      "latency_ms": 3341.5350914001465,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:38.910229"
+    },
+    {
+      "success": true,
+      "request_id": 77,
+      "latency_ms": 3457.643985748291,
+      "routed_to_pod": "inference-worker-medium-f75c6dcb5-ftm8l",
+      "timestamp": "2026-01-06T02:13:39.024574"
+    }
+  ]
+}
