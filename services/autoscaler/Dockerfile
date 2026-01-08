@@ -1,4 +1,5 @@
-FROM python:3.9-slim
+# Use x86_64 base image to avoid PyTorch ARM64/MKL-DNN compatibility issues on Apple Silicon
+FROM --platform=linux/amd64 python:3.9-slim
 
 WORKDIR /app
 
